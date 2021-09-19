@@ -26,8 +26,8 @@ def contact(request):
         phone = request.POST['phone']
         desc = request.POST['desc']
 
-        ins = Contact(name=name, email=email, phone=phone, desc=desc)
-        ins.save()
+        contacts = Contact(name=name, email=email, phone=phone, desc=desc)
+        contacts.save()
         print("Data inserted into db successfully.")
 
 
