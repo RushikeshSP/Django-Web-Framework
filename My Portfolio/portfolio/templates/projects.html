@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %} Projects {% endblock title %}
 {% block projectsactive %} active {% endblock projectsactive %}
 
@@ -9,12 +10,12 @@
         <h2 class="text-center my-3 py-3">My Projects</h2>
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 py-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/500x300/?Typing,code,programming" class="card-img-top"
+                    <img src="{% static 'img/developer.jpg' %}" class="card-img-top"
                         alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Developer</h5>
+                        <h5 class="card-title">Project1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
@@ -23,12 +24,12 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 py-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/500x300/?Typing,code,programming" class="card-img-top"
+                    <img src="{% static 'img/programmer.jpg' %}" class="card-img-top"
                         alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Programmer</h5>
+                        <h5 class="card-title">Project2</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
@@ -37,12 +38,12 @@
                 </div>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 py-3">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/500x300/?Typing,code,programming" class="card-img-top"
+                    <img src="{% static 'img/designer.jpg' %}" class="card-img-top"
                         alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Designer</h5>
+                        <h5 class="card-title">Project3</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>

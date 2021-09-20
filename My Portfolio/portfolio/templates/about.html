@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %} About {% endblock title %}
 {% block aboutactive %} active {% endblock aboutactive %}
 
@@ -11,7 +12,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/500x300/?Typing,code,programming" class="card-img-top"
+                    <img src="{% static 'img/designer.jpg' %}" class="card-img-top"
                         alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Developer</h5>
@@ -25,7 +26,7 @@
 
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/500x300/?Typing,code,programming" class="card-img-top"
+                    <img src="{% static 'img/programmer.jpg' %}" class="card-img-top"
                         alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Programmer</h5>
@@ -39,7 +40,7 @@
 
             <div class="col-md-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://source.unsplash.com/500x300/?Typing,code,programming" class="card-img-top"
+                    <img src="{% static 'img/developer.jpg' %}" class="card-img-top"
                         alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Designer</h5>
