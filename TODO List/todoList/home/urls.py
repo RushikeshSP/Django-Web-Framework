@@ -17,6 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from home import views
 
+# Django admin header customization
+
+admin.site.site_title = "Welcome to TODO List."
+admin.site.site_header = "Developer Login"
+admin.site.index_title = "Welcome Back"
+
+
 urlpatterns = [
     path('', views.home, name='home'),
     path('task', views.task, name='task')
