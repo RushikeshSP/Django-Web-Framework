@@ -42,18 +42,19 @@
 
     
     <div class="container my-5">
-        <form action="POST">
+        <form action="/" method="POST">
+            {% csrf_token %}
             <div class="mb-3">
-              <label for="task" class="form-label">Task:</label>
-              <input type="text" class="form-control" id="task", name="task">
+              <label for="task_name" class="form-label">Task:</label>
+              <input type="text" class="form-control" id="task_name", name="task_name" required>
             </div>
             <div class="mb-3">
               <label for="date" class="form-label">Date:</label>
-              <input type="date" class="form-control" id="date", name="date">
+              <input type="date" class="form-control" id="date", name="date" required>
             </div>
             <div class="mb-3">
                 <label for="desc" class="form-label">Task Description:</label>
-                <textarea class="form-control" id="desc" name="desc" rows="6"></textarea>
+                <textarea class="form-control" id="desc" name="desc" rows="6" required></textarea>
               </div>
             <button type="submit" class="btn btn-success">Submit</button>
           </form>
