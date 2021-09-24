@@ -85,19 +85,21 @@
   </div>
 
 
-  <div class="container-fluid py-5 bg-primary">
+  <div class="container-fluid py-5 bg-primary" id="predict">
     <h2 class="text-center my-3" style="color: yellow;">Predict The Fire Occurance</h2>
-    <form class="my-3" action="" method="POST">
+    <form class="my-3" action="#predict" method="POST">
       {% csrf_token %}
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="Oxygin" aria-label="Oxygin">
+          <input type="number" id="oxygen" name="oxygen" class="form-control" placeholder="Oxygin" aria-label="Oxygin">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Temperature" aria-label="Temperature">
+          <input type="number" id="temperature" name="temperature" class="form-control" placeholder="Temperature"
+            aria-label="Temperature">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Humidity" aria-label="Humidity">
+          <input type="number" id="humidity" name="humidity" class="form-control" placeholder="Humidity"
+            aria-label="Humidity">
         </div>
         <div class="text-center">
           <button type="submit" class="btn btn-dark my-5">Predict</button>
@@ -105,7 +107,6 @@
       </div>
     </form>
   </div>
-
 
   <footer class="text-center text-light bg-dark fixed-bottom py-1">Copyright &copy; 2021 www.forestfireprediction.com -
     All rights reserved!</footer>
