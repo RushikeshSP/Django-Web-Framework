@@ -106,12 +106,18 @@
           <button type="submit" class="btn btn-dark my-5">Predict</button>
         </div>
         <div class="text-center">
-          {% if predictFire.output == 1 %}<h3>Your Forest is in danger. Probability of Fire Occurance is:- {{predictFire.output}}</h3>
+          <!-- {% if predictFire.output %}{% if predictFire.output == 1 %}<h3>Your Forest is in danger. Probability of Fire Occurance is:- {{predictFire.output}}</h3>
           {% else %}<h3>Your Forest is Safe. Probability of Fire Occurance is:- {{predictFire.output}}</h3>
+          {% endif %}
+          {% endif %} -->
+          {% if output %}
+          {{ msg  }}
+          {% endif %}
+          {% if output == 0.0 %}Your Forest is Safe. Probability of Fire Occurance is:- {{output}}
           {% endif %}
         </div>
       </div>
-    </form>
+    </form> 
     <!-- 
     <form action="/predictions" method="GET">
       {% csrf_token %}

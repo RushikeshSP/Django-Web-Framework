@@ -26,15 +26,22 @@ def home(request):
 
         ins = Fire(oxygen = oxygen, temperature = temperature, humidity = humidity, output = output)
         ins.save()
+        print(output)
+        output = float(output)
+        print(output)
 
-        if output>str(0.5):
+
+        if output> 0.5:
             print('Your Forest is in Danger.\nProbability of fire occuring is {}'.format(output))
-            output = 1
+            msg = "Your Forest is in Danger.Probability of fire occuring is "+str(output)
+        elif output == 0.00 or output == 0.0 or output == 0:
+            # print('Your Forest is safe.\nProbability of fire occuring is {}'.format(output))
+            msg = "Your Forest is Safe.Probability of fire occuring is 0.0"
         else:
             print('Your Forest is safe.\nProbability of fire occuring is {}'.format(output))
-            output = 0
-
-        return TemplateResponse(request, 'base.html', {'predictFire': {'oxygen': oxygen, 'temperature': temperature, 'humidity': humidity, 'output': output}})
+            msg = "Your Forest is Safe.Probability of fire occuring is "+str(output)
+        dict2 = {'output': output, 'msg': msg}
+        return TemplateResponse(request, 'base.html', dict2)
         
 
         
