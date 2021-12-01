@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %} Contacts {% endblock title %}
+{% block contactactive %} active {% endblock contactactive %}
+
+
+{% block body%}
+
+    <div class="container my-3">
+        <h2 class="text-center">Contact Me</h2>
+        <form class="row g-4 px-5">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+            </div>
+
+            <div class="form-group">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com">
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="phone" class="form-control" id="phone" name="phone" placeholder="xxxxxxxxxx">
+            </div>
+            
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="desc" name="desc" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Message/Comments</label>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+    </div>
+
+    {% endblock body%}
